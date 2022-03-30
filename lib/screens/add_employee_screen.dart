@@ -8,8 +8,31 @@ class AddEmployeeScreen extends StatefulWidget {
 }
 
 class _AddEmployeeScreenState extends State<AddEmployeeScreen> {
+  final TextEditingController _textEditingController = TextEditingController();
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text(
+          'Add member',
+        ),
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(
+              Icons.save,
+            ),
+          ),
+        ],
+      ),
+      body: Column(
+        children: [
+          TextFormField(
+            controller: _textEditingController,
+            keyboardType: TextInputType.name,
+          ),
+        ],
+      ),
+    );
   }
 }
